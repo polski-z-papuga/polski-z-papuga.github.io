@@ -1,0 +1,63 @@
+// Styling for the contact section
+section#contact {
+  background-image: url("#{$contact-image}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  .section-heading {
+    color: $white;
+  }
+  .form-group {
+    margin-bottom: 25px;
+    input,
+    textarea {
+      padding: 20px;
+    }
+    input.form-control {
+      height: auto;
+    }
+    textarea.form-control {
+      height: 248px;
+    }
+  }
+  .form-control:focus {
+    border-color: $primary;
+    box-shadow: none;
+  }
+  .contact-title {
+    margin-bottom: 2rem;
+  }
+  .contact-block {
+    font-size: 1.1rem;
+    .contact-val {
+      color: #fed136;
+      font-weight: bold;
+    }
+  }
+  ::-webkit-input-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+  :-moz-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+  ::-moz-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+  :-ms-input-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+}
+
+@media (min-width: 768px) {
+  section#contact {
+    background-size: 100% auto;
+  }
+}

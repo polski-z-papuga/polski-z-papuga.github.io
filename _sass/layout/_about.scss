@@ -1,0 +1,18 @@
+section#about {
+  .portfolio-item {
+    img {
+      width: 100%;
+    }
+    .portfolio-caption > p {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  section#about {
+    .portfolio-caption > p {
+      text-align: center;
+    }
+  }
+}

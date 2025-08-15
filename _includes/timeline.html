@@ -1,0 +1,43 @@
+
+<!-- About -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+<section class="page-section bg-light" id="{{ site.data.sitetext[site.locale].timeline.section | default: "timeline" }}">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].timeline.title | default: "About Us" }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3" style="display: inline-block">
+      <img src="{{ site.data.sitetext[site.locale].timeline.photo }}" style="width: 100%; margin-top: 25px;">
+    </div>
+    <div class="col-lg-8">
+      <div class="large text-muted">
+        <ul>
+          {%- for skill in site.data.sitetext[site.locale].timeline.list -%}
+          <li><p>{{ skill.title | markdownify }}</p></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% else %}
+<section class="page-section" id="{{ site.data.sitetext.timeline.section | default: "timeline" }}">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2 class="section-heading text-uppercase">{{ site.data.sitetext.timeline.title | default: "About Us" }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 mx-auto text-center">
+      <div class="large text-muted">{{ site.data.sitetext.about.body | markdownify }}</div>
+    </div>
+  </div>
+</div>
+</section>
+{% endif %}
+<!-- End About -->
