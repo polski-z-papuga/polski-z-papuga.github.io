@@ -15,6 +15,7 @@
 
 url    : "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
+favicon: assets/img/favicon.ico
 
 title      : Polski Na Luzie
 email      : polskinaluzie@yahoo.com #this is also the email contact forms will go to
@@ -22,9 +23,9 @@ description: "Site description"
 author     : Your Name
 
 #optional, defaults to site title
-logo:
-  path: assets/img/logo.png
-  height: 80 #height in px, defaults to 52px
+#logo:
+#  path: assets/img/logo.png
+#  height: 80 #height in px, defaults to 52px
 
 locale: "en-US" # See available languages in _data/sitetext.yml
 
