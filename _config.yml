@@ -13,14 +13,14 @@
 
 # theme: jekyll-agency
 
-url    : "" # the base hostname & protocol for your site, e.g. http://example.com
+url    : "https://polski-na-luzie.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 favicon: assets/img/favicon.ico
 
 title      : Polski Na Luzie
 email      : polskinaluzie@yahoo.com #this is also the email contact forms will go to
-description: "Site description"
-author     : Your Name
+description: "Polski na luzie — розмовні клуби польської мови для дорослих і дітей від 10 років. Онлайн-уроки, авторські воркбуки та дружня атмосфера навчання."
+author     : ""
 
 #optional, defaults to site title
 #logo:
@@ -29,8 +29,8 @@ author     : Your Name
 
 locale: "en-US" # See available languages in _data/sitetext.yml
 
-analytics:
-  google: #Google Analytics tracking code here
+#analytics:
+#  google: #Google Analytics tracking code here
 
 collections:
   portfolio:

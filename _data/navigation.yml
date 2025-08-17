@@ -19,7 +19,7 @@ en: &DEFAULT_EN
       section: portfolio
     - title: "Наша програма"
       section: about
-    - title: "Викладач"
+    - title: "Наша Команда"
       section: timeline
     - title: "Відгуки"
       section: team

@@ -1,37 +1,6 @@
 // ---
 // ---
 
-// $(function() {
-//   $('#sendMessageButton').click(function(event) {
-//     event.preventDefault();
-//     var name = $("input#name").val();
-//     var email = $("input#email").val();
-//     var phone = $("input#phone").val();
-//
-//     const token = '8420999656:AAGAk0YRgT2uvs9hnAtHbsHZVRzAl7AzUtw';
-//     const chatId = '451229866';
-//     var textMessage = name + "\n" + phone + "\n" + email;
-//
-//     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(textMessage)}`;
-//
-//
-//     fetch(url)
-//       .then(response => {
-//         if (!response.ok) {
-//           throw new Error('Network response was not ok');
-//         }
-//         return response.json();
-//       })
-//       .then(data => {
-//         alert('Comment sent successfully!');
-//         document.getElementById('commentText').value = '';
-//       })
-//       .catch(error => {
-//         console.error('There was a problem with the fetch operation:', error);
-//       });
-//   });
-// });
-
 $(function() {
   var formattedMessage = function(name, phone, email) {
     const line = "\n  --------------  \n";
@@ -56,8 +25,8 @@ $(function() {
         firstName = name.split(' ').slice(0, -1).join(' ');
       }
 
-      const token = '8420999656:AAGAk0YRgT2uvs9hnAtHbsHZVRzAl7AzUtw';
-      const chatIds = ['451229866', '687012041'];
+      const token = '8242064699:AAEvPSyHk2W7gkyRbZeCjy2mtrx_T4PbK34';
+      const chatIds = ['451229866']; //'687012041'
       var textMessage = formattedMessage(name, phone, email);
 
       $this = $("#sendMessageButton");
