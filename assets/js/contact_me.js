@@ -26,7 +26,7 @@ $(function() {
       }
 
       const token = '8242064699:AAEvPSyHk2W7gkyRbZeCjy2mtrx_T4PbK34';
-      const chatIds = ['451229866']; //'687012041'
+      const chatIds = ['451229866', '687012041'];
       var textMessage = formattedMessage(name, phone, email);
 
       $this = $("#sendMessageButton");
