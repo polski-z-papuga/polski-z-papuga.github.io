@@ -13,12 +13,12 @@
 
 # theme: jekyll-agency
 
-url    : "https://polski-na-luzie.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url    : "https://polski-z-papuga.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 favicon: assets/img/favicon.ico
 
 title      : Polski z papugą
-email      : polskinaluzie@yahoo.com #this is also the email contact forms will go to
+email      : polskizpapuga@yahoo.com #this is also the email contact forms will go to
 description: "Polski z papugą — розмовні клуби польської мови для дорослих і дітей від 10 років. Онлайн-уроки, авторські воркбуки та дружня атмосфера навчання."
 author     : ""
 
