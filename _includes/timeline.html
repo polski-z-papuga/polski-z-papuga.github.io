@@ -8,12 +8,12 @@
       <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].timeline.title | default: "About Us" }}</h2>
     </div>
   </div>
-  <h3>{{ site.data.sitetext[site.locale].timeline.founder }}</h3>
+  <h3><i>{{ site.data.sitetext[site.locale].timeline.founder }}</i></h3>
   <div class="row">
     <div class="col-lg-3" style="display: inline-block">
       <img src="{{ site.data.sitetext[site.locale].timeline.photo }}" style="width: 100%; margin-top: 25px;">
     </div>
-    <div class="col-lg-8">
+    <div class="col-lg-9">
       <div class="large text-muted">
         <ul>
           {%- for skill in site.data.sitetext[site.locale].timeline.list -%}
@@ -24,16 +24,21 @@
     </div>
   </div>
   <div style="width: 100%; height: 4rem;"></div>
-  <h3>{{ site.data.sitetext[site.locale].timeline.teachers.title }}</h3>
+  <h3><i>{{ site.data.sitetext[site.locale].timeline.teachers.title }}</i></h3>
   <div class="row">
-    <div class="offset-lg-3 col-lg-8">
-      <div class="large text-muted">
-        <ul>
-          {%- for skill in site.data.sitetext[site.locale].timeline.teachers.features -%}
-          <li><p>{{ skill.title | markdownify }}</p></li>
-          {% endfor %}
-        </ul>
-      </div>
+    <div class="col-md-6 large text-muted">
+      <ul>
+        {%- for skill in site.data.sitetext[site.locale].timeline.teachers.features_left -%}
+        <li><p>{{ skill.title | markdownify }}</p></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6 large text-muted">
+      <ul>
+        {%- for skill in site.data.sitetext[site.locale].timeline.teachers.features_right -%}
+        <li><p>{{ skill.title | markdownify }}</p></li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
