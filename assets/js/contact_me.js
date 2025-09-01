@@ -2,9 +2,9 @@
 // ---
 
 $(function() {
-  var formattedMessage = function(name, phone, email) {
+  var formattedMessage = function(name, phone) {
     const line = "\n  --------------  \n";
-    var msg = "Ім’я: \n" + name + line + "Номер мобільного: \n" + phone + line + "Імейл: \n" + email;
+    var msg = "Ім’я: \n" + name + line + "Номер мобільного: \n" + phone;
     return encodeURIComponent(msg);
   };
 
@@ -17,7 +17,6 @@ $(function() {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
       var name = $("input#name").val();
-      var email = $("input#email").val();
       var phone = $("input#phone").val();
       var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
@@ -32,7 +31,7 @@ $(function() {
         '621525205',  // yul
         '5134435924'  //all
       ];
-      var textMessage = formattedMessage(name, phone, email);
+      var textMessage = formattedMessage(name, phone);
 
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages

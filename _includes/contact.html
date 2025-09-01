@@ -22,12 +22,6 @@
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input name="_replyto" class="form-control" id="email" type="email"
-                  placeholder="{{ site.data.sitetext[site.locale].contact.email | default: "Email*" }}"
-                  required="required" data-validation-required-message="{{ site.data.sitetext[site.locale].contact.email-validation | default: "Please enter your email address." }}">
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="form-group">
                 <input name="phone" class="form-control" id="phone" type="tel"
                   placeholder="{{ site.data.sitetext[site.locale].contact.phone | default: "Phone Number*" }}"
                   required="required" data-validation-required-message="{{ site.data.sitetext[site.locale].contact.phone-validation | default: "Please enter your phone number." }}">
@@ -46,18 +40,29 @@
 
 
       <div class="col-md-6 text-center section-heading">
-        <div style="height: 50px;"></div>
+        <div style="height: 25px;"></div>
         <h4 class="text-uppercase contact-title"> {{ site.data.sitetext[site.locale].contact.our_contacts }} </h4>
         <div class="contact-block">
           <p>
             <img height="40" src="assets/img/telegram_logo.png"/>
-            <span class="contact-val">@polski_zpapuga</span>
+            <span class="contact-val">
+              <a href="https://t.me/polski_zpapuga" target="_blank">@polski_zpapuga</a>
+            </span>
           </p>
           <p>
             <img height="40" src="assets/img/viber_logo.png"/>
-            <span class="contact-val"> {{ site.data.sitetext[site.locale].contact.phone_number }} </span>
+            <span class="contact-val">
+              {% assign phone = site.data.sitetext[site.locale].contact.phone_number %}
+              {% assign viber_phone = phone | remove: '+' | remove: '-' | remove: '(' | remove: ')' %}
+              <a href="{{ 'viber://chat?number=%2B' | append: viber_phone }}" target="_blank">{{ phone }}</a>
+            </span>
           </p>
-          <p>E-mail: <span class="contact-val"> {{ site.data.sitetext[site.locale].contact.email_address }} </span></p>
+          <p>E-mail:
+            <span class="contact-val">
+              {% assign email_address = site.data.sitetext[site.locale].contact.email_address %}
+              <a href="mailto:{{ email_address }}" target="_blank">{{ email_address }}</a>
+            </span>
+          </p>
         </div>
 
       </div>
